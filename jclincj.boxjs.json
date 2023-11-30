@@ -80,7 +80,7 @@
       "config": "30 8 * * * https://raw.githubusercontent.com/zqzess/rule_for_quantumultX/master/js/Mine/aDriveCheckIn/aDriveCheckIn.js, tag=阿里网盘签到, img-url=https://raw.githubusercontent.com/jclincj/QuantumultX_conf/master/icons/aliyunpan-logo.png"
     },
     {
-      "config": "33 8/9 * * * https://raw.githubusercontent.com/zqzess/rule_for_quantumultX/master/js/Mine/v2freeCheckIn/v2freeCheckIn.js, tag=v2free签到, img-url=https://raw.githubusercontent.com/jclincj/Hand-Painted-icon/master/Social_Media/Telegram.png"
+      "config": "33 8,9 * * * https://raw.githubusercontent.com/zqzess/rule_for_quantumultX/master/js/Mine/v2freeCheckIn/v2freeCheckIn.js, tag=v2free签到, img-url=https://raw.githubusercontent.com/jclincj/Hand-Painted-icon/master/Social_Media/Telegram.png"
     },
     {
       "config": "0 9 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/box/switcher/box.switcher.js, tag=boxjs-session-switch, img-url=https://raw.githubusercontent.com/jclincj/QuantumultX_conf/master/icons/BoxSwitcher.png"
