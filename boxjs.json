@@ -1,0 +1,90 @@
+{
+  "id": "Zer0.app.sub",
+  "name": "Zer0 自用集合",
+  "description": "BoxJs订阅 && QuantumultX任务仓库",
+  "author": "@Zer0",
+  "icon": "https://avatars.githubusercontent.com/u/84553073?v=4",
+  "repo": "https://github.com/chevalavala/QuantumultX_conf",
+  "onInstall": {
+    "title": "安装确认",
+    "message": "本订阅包含重写资源, 是否需要自动安装?",
+    "install": {
+      "Surge": "",
+      "QuanX": "quantumult-x:///add-resource?remote-resource=%7B%22rewrite_remote%22%3A%5B%22https%3A%2F%2Fraw.githubusercontent.com%2Fzqzess%2Frule_for_quantumultX%2Fmaster%2Fjs%2FMine%2FaDriveCheckIn%2FaDriveCheckIn_token.qxrewrite%2Ctag%3DaDrive_tokenGet%22%2C%22https%3A%2F%2Fraw.githubusercontent.com%2Fzqzess%2Frule_for_quantumultX%2Fmaster%2Fjs%2FMine%2Fv2freeCheckIn%2F2freeCheckIn_cookie.qxrewrite%2Ctag%3Dv2free_tokenGet%22%5D%7D",
+      "Loon": "",
+      "Shadowrocket": "",
+      "Stash": ""
+    }
+  },
+  "apps": [
+    {
+      "id": "aDriveCheckIn",
+      "name": "阿里云盘自动签到",
+      "keys": [
+        "@ADriveCheckIn.refresh_token_body",
+        "@ADriveCheckIn.headers",
+        "@ADriveCheckIn.refresh_token",
+        "@ADriveCheckIn.isAutoGetReword"
+      ],
+      "settings": [
+        {
+          "id": "@ADriveCheckIn.refresh_token",
+          "name": "refresh_token",
+          "val": null,
+          "type": "text",
+          "autoGrow": false,
+          "rows": 1,
+          "desc": "阿里云盘refresh_token"
+        },
+        {
+          "id": "@ADriveCheckIn.isAutoGetReword",
+          "name": "开启自动领取奖励",
+          "val": true,
+          "type": "boolean",
+          "desc": "默认开启"
+        }
+      ],
+      "author": "@zqzess",
+      "repo": "https://github.com/zqzess/rule_for_quantumultX",
+      "icons": [
+        "https://raw.githubusercontent.com/Softlyx/Fileball/main/YUAN/ALiYun.png",
+        "https://raw.githubusercontent.com/Softlyx/Fileball/main/YUAN/ALiYun.png"
+      ]
+    },
+    {
+      "id": "V2freeCheckIn",
+      "name": "v2free自动签到",
+      "keys": [
+        "@V2freeCheckIn.Cookie"
+      ],
+      "settings": [
+        {
+          "id": "@V2freeCheckIn.Cookie",
+          "name": "Cookie",
+          "val": null,
+          "type": "text",
+          "autoGrow": false,
+          "rows": 1,
+          "desc": "v2free_Cookie"
+        }
+      ],
+      "author": "@Zer0",
+      "repo": "https://github.com/chevalavala/QuantumultX_conf",
+      "icons": [
+        "https://raw.githubusercontent.com/chevalavala/Hand-Painted-icon/master/Social_Media/Telegram.png",
+        "https://raw.githubusercontent.com/chevalavala/Hand-Painted-icon/master/Social_Media/Telegram.png"
+      ]
+    }
+  ],
+  "task": [
+    {
+      "config": "30 8 * * * https://raw.githubusercontent.com/zqzess/rule_for_quantumultX/master/js/Mine/aDriveCheckIn/aDriveCheckIn.js, tag=阿里网盘签到, img-url=https://raw.githubusercontent.com/chevalavala/QuantumultX_conf/master/icons/aliyunpan-logo.png"
+    },
+    {
+      "config": "33 8,9 * * * https://raw.githubusercontent.com/zqzess/rule_for_quantumultX/master/js/Mine/v2freeCheckIn/v2freeCheckIn.js, tag=v2free签到, img-url=https://raw.githubusercontent.com/chevalavala/Hand-Painted-icon/master/Social_Media/Telegram.png"
+    },
+    {
+      "config": "0 9 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/box/switcher/box.switcher.js, tag=boxjs-session-switch, img-url=https://raw.githubusercontent.com/chevalavala/QuantumultX_conf/master/icons/BoxSwitcher.png"
+    }
+  ]
+}
